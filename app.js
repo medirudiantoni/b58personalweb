@@ -11,9 +11,9 @@ const bcrypt = require('bcrypt');
 const session = require('express-session');
 const flash = require('express-flash');
 
-require("dotenv").config();
+require("dotenv").config()
 
-const environment = process.env.MODE_ENV
+const environment = process.env.NODE_ENV
 
 const sequelize = new Sequelize(config[environment]);
 
