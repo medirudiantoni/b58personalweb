@@ -3,14 +3,19 @@ const app = express();
 const path = require('path');
 const hbs = require('hbs');
 const port = 4000;
-const config = require('./config/config.json');
+const config = require('./config/config');
 const { Sequelize, QueryTypes } = require('sequelize');
-const sequelize = new Sequelize(config.development);
 const helper = require('./src/libs/helper');
 const upload = require('./src/middlewares/multer');
 const bcrypt = require('bcrypt');
 const session = require('express-session');
 const flash = require('express-flash');
+
+require("dotenv").config();
+
+const environment = process.env.MODE_ENV
+
+const sequelize = new Sequelize(config[environment]);
 
 app.set("view engine", "hbs");
 app.set("views", path.join(__dirname, "src", "views"));
