@@ -1,0 +1,56 @@
+{{> head }}
+  {{> navbar }}
+
+    <main>
+        <div class="container">
+            <div class="col-sm-6 offset-sm-3">
+                <h1 class="text-center">GET IN TOUCH</h1>
+                <form id="my-form" name="my-form" class="w-100" enctype="multipart/form-data" method="post" action="/blog">
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold" for="title">Title</label>
+                        <input class="form-control" type="text" id="title" name="title">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold" for="content">Content</label>
+                        <textarea class="form-control" name="content" id="content" rows="10" name="content"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold" for="input-blog-image">Image</label>
+                        <input class="form-control" type="file" id="input-blog-image" name="image">
+                    </div>
+                    <input type="hidden" value="1" name="author_id">
+                    <div class="button-submit">
+                        <button class="btn btn-primary">submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="devider my-5"></div>
+        <div class="container py-5 mb-5">
+            <div class="col-md-8 offset-md-2">
+                {{#each blog }}
+                {{!-- <div class="card mb-3" style="max-width: 540px;"> --}}
+                  <div class="card mb-3">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <img src={{ image }} class="img-fluid h-100 rounded-start" alt="...">
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <h5 class="card-title">{{ title }}</h5>
+                          <a href="/blog/{{ id }}" style="text-decoration: none; color: #000;" class="card-text">{{ excerpt content }}...<span class="text-primary">Read more?</span></a>
+                          <p class="card-text"><small class="text-body-secondary">{{ timeAgo created_at }}</small></p>
+                          <div class="w-100 d-flex justify-content-end column-gap-2">
+                            <a href="/blog-edit/{{ id }}" class="btn btn-secondary">Edit</a>
+                            <a href="/blog-delete/{{ id }}" class="btn btn-danger">Delete</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                {{/each }}
+            </div>
+        </div>
+    </main>
+
+{{> foot }}

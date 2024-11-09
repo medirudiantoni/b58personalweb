@@ -1,0 +1,67 @@
+{{> head }}
+{{> navbar }}
+
+<main>
+    <h1 class="text-center fw-bold mb-4">{{ project.name }}</h1>
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-sm-5 offset-sm-2">
+                <img src="{{ project.image_url }}" alt="oke" style="width: 100%; aspect-ratio: 4/2.5; object-fit: cover;">
+            </div>
+            <div class="col-sm-3 p-3">
+                <div class="w-100 mb-4">
+                    <h5 class="mb-2 fw-bold">Duration</h5>
+                    <div class="d-flex align-items-center column-gap-2 fw-semibold">
+                        <i class="fa-solid fa-calendar-days fa-lg" style="transform: translateY(-8px);"></i>
+                        <p style="color: #444;">{{formatDate project.start_date }} - {{formatDate project.end_date }}</p>
+                    </div>
+                    <div class="d-flex align-items-center column-gap-2 fw-">
+                        <i class="fa-regular fa-clock fa-lg" style="transform: translateY(-8px);"></i>
+                        <p>{{calculateDuration project.start_date project.end_date }}</p>
+                    </div>
+                </div>
+                <div class="w-100 mb-4">
+                    <h5 class="mb-2 fw-bold">Technologies</h5>
+                    <div class="row">
+                        {{#if project.node_js }}
+                        <div class="col-6 d-flex align-items-center column-gap-2">
+                            <i class="fa-brands fa-node-js fa-xl" style="transform: translateY(-8px);"></i>
+                            <p>Node Js</p>
+                        </div>
+                        {{/if }}
+                        {{#if project.next_js }}
+                        <div class="col-6 d-flex align-items-center column-gap-2">
+                            <p class="fw-semibold" style="padding: 2px; background-color: black; color: aliceblue;">
+                                <span class="fs-5">Next</span>
+                                <span class="fs-6">Js</span>
+                            </p>
+                            <p>Next Js</p>
+                        </div>
+                        {{/if }}
+                        {{#if project.react_js }}
+                        <div class="col-6 d-flex align-items-center column-gap-2">
+                            <i class="fa-brands fa-react fa-xl" style="transform: translateY(-8px);"></i>
+                            <p>React Js</p>
+                        </div>
+                        {{/if }}
+                        {{#if project.typescript }}
+                        <div class="col-6 d-flex align-items-center column-gap-2">
+                            <div style="width: 34px; height: 34px; background-color: rgb(18, 94, 237); position: relative; display: flex; align-items: end; justify-content: end; bottom: 8px; padding: 2px;">
+                                <p class="fw-semibold" style="color: aliceblue; transform: translateY(18px);">TS</p>
+                            </div>
+                            <p>Typescript</p>
+                        </div>
+                        {{/if }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-8 offset-2">
+                <p style="text-align: justify;">{{ project.description }}</p>
+            </div>
+        </div>
+    </div>
+</main>
+
+{{> foot }}

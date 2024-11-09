@@ -1,0 +1,81 @@
+{{> head }}
+    {{> navbar }}
+
+    <section class="w-100 h-auto py-5 bg-secondary-subtle">
+        <div class="container d-flex justify-content-center">
+            <div class="card mb-3" style="max-width: 1020px;">
+                <div class="row g-0">
+                  <div class="col-md-8 p-4">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                      <div class="mb-2">
+                          <h1 class="card-title">Welcome to my hut</h1>
+                          <p class="card-text" style="text-align: justify;">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, corporis, id ipsa dolore ratione ullam at aperiam reprehenderit sed aliquam similique eligendi nulla neque rem. Tempore iste itaque magnam commodi aspernatur dolor voluptatum voluptates maxime? Delectus molestiae deleniti voluptatem in.</p>
+                      </div>
+                      <div class="d-flex gap-2 mt-3">
+                        <button class="btn btn-dark px-3 rounded-pill">Contact</button>
+                        <button class="btn btn-light d-flex align-items-center gap-2">
+                            <span>Download CV</span>
+                            <img src="./img/download.png" alt="d" width="16px">
+                        </button>
+                      </div>
+                      <div class="d-flex align-items-center mt-5 gap-3">
+                        <img src="./img/linkedin.png" alt="social icon">
+                        <img src="./img/instagram.png" alt="social icon">
+                        <img src="./img/facebook.png" alt="social icon">
+                        <img src="./img/twitter.png" alt="social icon">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4 p-4">
+                    <div class="rounded-2 overflow-hidden shadow">
+                        <img src="./img/media.jpg" class="img-fluid" alt="..." style="aspect-ratio: 3/3.4;">
+                        <div class="text-center pt-2">
+                            <h3 class="fw-bold mb-0">Rhoma Irama</h3>
+                            <p>Fullstack Developer</p>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </section>
+
+    <section class="w-100 h-auto py-5">
+      <div class="container">
+        <h1 class="text-center fw-bold mb-5">MY PROJECT</h1>
+        <div class="d-flex justify-content-center">
+          
+          <div class="row gap-2 row-gap-5 justify-content-start" style="max-width: 1000px;">
+            {{#each project}}
+              <div class="col rounded-2 d-flex justify-content-center">
+                <div class="card" style="width: 18rem;">
+                  <img src="{{ image_url }}" class="card-img-top" alt="..." style="aspect-ratio: 1/0.7;">
+                  <div class="card-body">
+                    <a href="/project-detail/{{ id }}" class="w-100" style="display: block; text-decoration: none; color: #000;">
+                      <h5 class="card-title mb-0">{{ name }}</h5>
+                      <p class="text-secondary"><small>durasi: {{calculateDuration start_date end_date}}</small></p>
+                      <p class="card-text">{{ description }}</p>
+                    </a>
+                    <div class="mt-2 mb-3 d-flex gap-2">
+                      <img src="./img/playstore.png" alt="pl" width="20px">
+                      <img src="./img/android.png" alt="pl" width="20px">
+                      <img src="./img/java.png" alt="pl" width="20px">
+                    </div>
+                    <div class="w-100 d-flex gap-2">
+                      <a href="/project-edit/{{ id }}" class="btn btn-dark w-50">Edit</a>
+                      {{!-- <a href="/project-delete/{{ id }}" class="btn btn-danger w-50">delete</a> --}}
+                      <button onclick="deleteProject({{ id }})" class="btn btn-dark w-50">Delete</button>                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {{/each}}
+           
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+<script src="/javascript/project.js"></script>
+{{> foot }}

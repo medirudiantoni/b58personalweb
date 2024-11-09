@@ -1,0 +1,44 @@
+[
+    {
+        "username": "Uzumaki Naruto", 
+        "image": "https://i.pinimg.com/236x/b2/ae/b3/b2aeb38e8452ba616d6098a7e3f214d3.jpg",
+        "comment": "Rasengan dattebayou 👍👍👍",
+        "star": 5
+    },
+    {
+        "username": "Hatake Kakashi", 
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQH7qljFKnFyjmC8FMs35l9irOVeyo8_04h6A&s", 
+        "comment": "Naniii! 🙀, ma masakaa!",
+        "star": 4
+    },
+    {
+        "username": "Uchiha Itachi", 
+        "image": "https://i.pinimg.com/control/564x/f6/3d/b9/f63db90d2dea1a06111fe9a5f6dbd55f.jpg", 
+        "comment": "Becoming Hokage Doesn't Mean People Will Acknowledge You.",
+        "star": 3
+    },
+    {
+        "username": "Uchiha Sasuke", 
+        "image": "https://upload.wikimedia.org/wikipedia/id/thumb/c/c6/Sasuke_Uchiha_%28Good%2CShippuden%29.jpg/800px-Sasuke_Uchiha_%28Good%2CShippuden%29.jpg", 
+        "comment": "Chidoriii ⚡⚡⚡⚡",
+        "star": 4
+    },
+    {
+        "username": "Sakura Haruno", 
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0MBAh1_8sj6rA6QhH31iBkhG2v7rLce4OSQ&s", 
+        "comment": "お願いだからやめて…わたし…怖いの",
+        "star": 3
+    },
+    {
+        "username": "Pain Akatsuki", 
+        "image": "https://assets.ggwp.id/2023/08/yahiko-naruto-4.jpg", 
+        "comment": "Itami o kanjiro Itami o kangaero Itami o uketore Itami o shire Koko yori.... sekai ni itami o..... SHINRA TENSEI!!!!",
+        "star": 5
+    },
+    {
+        "username": "Uchiha Madara", 
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzbvteNexEaGI1V8L7MPv4FwESmltRv4DPQQ&s", 
+        "comment": "Genjitsu o miro. Kono yo wa omoidouri ni wa ikanu koto bakarida",
+        "star": 5
+    }
+]

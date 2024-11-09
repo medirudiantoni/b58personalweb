@@ -1,0 +1,48 @@
+{{> head }}
+
+    {{> navbar }}
+
+    <section class="w-100 py-5 bg-secondary-subtle">
+      <div class="container">
+        <div class="col-md-6 offset-3 p-5">
+          <h1>GET IN TOUCH</h1>
+
+          <form id="my-form">
+              
+            <div class="mb-3">
+              <label for="name" class="form-label fw-">Name</label>
+              <input type="text" class="form-control" id="name">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label fw-">Email</label>
+              <input type="email" class="form-control" id="email">
+            </div>
+            <div class="mb-3">
+              <label for="phone-number" class="form-label fw-">Phone Number</label>
+              <input type="number" class="form-control" id="phone-number">
+            </div>
+            <label class="w-100 mb-4">
+              <p class="mb-2">Subject</p>
+              <select class="form-select" aria-label="Default select example" id="subject">
+                <option selected>Open this select menu</option>
+                <option value="Let's talk">Let's talk</option>
+                <option value="Let's work togather">Let's work togather</option>
+                <option value="Can you help me?">Can you help me?</option>
+              </select>
+            </label>
+
+            <div class="mb-4">
+              <label for="message" class="mb-2">Your Message</label>
+              <textarea class="form-control" id="message" style="height: 100px"></textarea>
+            </div>
+            
+            <div class="d-flex justify-content-end">
+              <button type="submit" class="btn btn-dark rounded-pill px-4">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+<script src="/javascript/contact.js"></script>
+{{> foot }}

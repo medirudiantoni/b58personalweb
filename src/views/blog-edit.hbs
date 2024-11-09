@@ -1,0 +1,31 @@
+{{> head }}
+  {{> navbar }}
+
+    <main>
+        <div class="container">
+            <div class="col-sm-6 offset-sm-3">
+                <h1 class="text-center">EDIT POST</h1>
+                <form id="my-form" name="my-form" enctype="multipart/form-data" class="w-100" method="post" action="/blog-edit/{{ data.id }}">
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold" for="title">Title</label>
+                        <input class="form-control" type="text" id="title" value="{{ data.title }}" name="title">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold" for="content">Content</label>
+                        <textarea class="form-control" name="content" id="content" rows="10" name="content">{{ data.content }}</textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold" for="input-blog-image">Image</label>
+                        <input class="form-control" type="file" id="input-blog-image" name="image">
+                        <input type="hidden" value="{{ data.image }}" name="oldImage">
+                    </div>
+                    <input type="hidden" value="1" name="author_id">
+                    <div class="button-submit">
+                        <button class="btn btn-primary">submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+{{> foot }}

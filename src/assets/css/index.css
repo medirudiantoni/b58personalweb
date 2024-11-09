@@ -1,0 +1,111 @@
+body {
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+  background-color: rgb(226 232 240);
+}
+
+.contact-me {
+    background-color: black;
+    color: white;
+    padding: 7px 20px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+
+main {
+    min-height: 100vh;
+    padding-top: 100px;
+}
+
+.container {
+  background-color: rgb(245 245 245);
+  width: 100%;
+  max-width: 56rem;
+  height: fit-content;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.1);
+}
+.contents {
+  width: 50%;
+  height: fit-content;
+  margin: auto;
+  padding: 32px 0;
+}
+h1 {
+  font-size: 24px;
+}
+p {
+  text-align: justify;
+  font-size: 14px;
+}
+button {
+  border: none;
+  margin-bottom: 10px;
+  display: block;
+}
+.contact-button {
+  padding: 6px 20px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 99px;
+}
+button span img {
+  width: 16px;
+}
+.social-media-icons {
+  width: fit-content;
+  height: fit-content;
+  margin: auto;
+  display: block;
+}
+.social-media-icons img {
+  width: 32px;
+  margin: 10px 3px;
+}
+.card {
+  display: block;
+  margin: auto;
+  width: 260px;
+  height: fit-content;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.1);
+}
+.card img {
+  width: 100%;
+  aspect-ratio: 3/3.2;
+  object-fit: cover;
+  object-position: top;
+  box-sizing: border-box;
+}
+.card .card-text {
+  padding: 4px 0;
+}
+.card .card-text h2 {
+  text-align: center;
+  line-height: 0;
+}
+.card .card-text p {
+  text-align: center;
+  line-height: 0.5;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 720px) {
+  body {
+    padding: 5px;
+  }
+  .contents {
+    width: 80%;
+    height: fit-content;
+    margin: auto;
+    padding: 32px 0;
+  }
+  .card {
+    width: 100%;
+  }
+}

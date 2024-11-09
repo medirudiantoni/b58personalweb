@@ -1,0 +1,73 @@
+{{> head }}
+    {{> navbar }}
+
+    <main>
+      
+      <section class="w-100 py-5 bg-secondary-subtle">
+        <div class="conatiner">
+          <div class="col-sm-6 offset-sm-3 py-5 px-3">
+            <h1 class="text-center mb-4">EDIT MY PROJECT</h1>
+
+            <form id="add_my_project" method="post" action="/project-update/{{ project.id }}" enctype="multipart/form-data">
+              
+              <div class="mb-3">
+                <label for="project_name" class="form-label fw-">Project Name</label>
+                <input name="name" type="text" value="{{ project.name }}" class="form-control" id="project_name">
+              </div>
+              <div class="w-100 d-flex gap-2">
+                <div class="mb-3 w-100">
+                  <label for="start_date" class="form-label fw-">Start Date</label>
+                  <input name="start_date" value="{{ project.start_date }}" type="date" class="form-control" id="start_date">
+                </div>
+                <div class="mb-3 w-100">
+                  <label for="end_date" class="form-label fw-">End Date</label>
+                  <input name="end_date" value="{{ project.end_date }}" type="date" class="form-control" id="end_date">
+                </div>
+              </div>
+              
+              <div>
+                <label for="description" class="mb-2">Description</label>
+                <textarea name="description" class="form-control" id="description" style="height: 100px">{{ project.description }}</textarea>
+              </div>
+              
+              <div class="my-4">
+                <label class="mb-2">Technologies</label>
+                <div class="d-flex flex-wrap">
+                  <div class="mb-3 form-check w-50">
+                    <input name="nodeJs" type="checkbox" class="form-check-input" id="nodeJs" value="true" {{#if project.node_js }}checked{{/if }}>
+                    <label class="form-check-label" for="nodeJs">Node Js</label>
+                  </div>
+                  <div class="mb-3 form-check w-50">
+                    <input name="nextJs" type="checkbox" class="form-check-input" id="nextJs" value="true" {{#if project.next_js }}checked{{/if }}>
+                    <label class="form-check-label" for="nextJs">Next Js</label>
+                  </div>
+                  <div class="mb-3 form-check w-50">
+                    <input name="reactJs" type="checkbox" class="form-check-input" id="reactJs" value="true" {{#if project.react_js }}checked{{/if }}>
+                    <label class="form-check-label" for="reactJs">React Js</label>
+                  </div>
+                  <div class="mb-3 form-check w-50">
+                    <input name="typescript" type="checkbox" class="form-check-input" id="typescript" value="true" {{#if project.typescript }}checked{{/if }}>
+                    <label class="form-check-label" for="typescript">Typescript</label>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="upload_image" class="form-label">Upload Image</label>
+                <input class="form-control" type="file" id="upload_image" name="image">
+                <input type="hidden" value="{{ project.image_url }}" name="oldImage">
+                <input id="image_url_getter" type="hidden" name="upload_image">
+                <div class="gap-2 my-3">
+                  <p class="inline-block mb-2">Image Preview:</p>
+                  <img src="{{ project.image_url }}" id="image_preview" class="border border-primary bg-white rounded-4" style="width: 100%; aspect-ratio: 4/2.5; object-fit: cover;"></img>
+                </div>
+              </div>
+              <div class="d-flex justify-content-end">
+                <button type="submit" class="btn btn-dark rounded-pill px-3">Submit</button>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </section>
+    
+{{> foot }}

@@ -1,0 +1,141 @@
+body {
+    background-color: #e2e8f0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contact-me {
+    background-color: black;
+    color: white;
+    padding: 7px 20px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+
+main {
+    padding: 40px;
+    padding-top: 100px;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    height: fit-content;
+    margin: auto;
+}
+
+label {
+    display: block;
+}
+
+input, textarea {
+    width: 92%;
+    padding: 8px 16px;
+    border: none;
+    margin-bottom: 14px;
+    border-radius: 6px;
+    box-shadow: 5px 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+.button-submit {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+button {
+    padding: 6px 20px;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 99px;
+}
+
+.devider {
+    margin: 60px auto;
+    width: 80%;
+    border-bottom: 4px solid gray;
+}
+
+.blogs-container {
+    width: 100%;
+    max-width: 1000px;
+    height: fit-content;
+    margin: auto;
+    margin-bottom: 200px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.blog-item {
+    width: 100%;
+    height: fit-content;
+    padding-bottom: 20px;
+    border-bottom: 2px solid gray;
+    position: relative;
+    display: flex;
+    gap: 50px;
+}
+
+.blog-item .image-content {
+    width: 100%;
+    max-width: 320px;
+    aspect-ratio: 4/3;
+    padding-top: 24px;
+}
+
+.blog-item .text-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 50px;
+}
+
+.blog-item .image-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.blog-actions {
+    position: absolute;
+    bottom: 20px;
+    right: 4px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.blog-actions button:active {
+    transform: scale(0.95);
+}
+
+.blog-actions button:first-child {
+    padding: 8px 16px;
+    border-radius: 99px;
+    cursor: pointer;
+    background-color: rgb(0, 191, 255);
+}
+
+.blog-actions button:last-child {
+    padding: 8px 16px;
+    border-radius: 99px;
+    cursor: pointer;
+    background-color: rgb(255, 42, 0);
+    color: white;
+}
+
+@media screen and (max-width: 720px) {
+    main {
+        padding: 10px;
+        padding-top: 100px;
+    }
+    .blogs-container {
+        padding: 10px;
+    }
+    .blog-item {
+        flex-direction: column;
+    }
+}

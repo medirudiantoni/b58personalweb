@@ -1,0 +1,126 @@
+nav {
+    height: fit-content;
+    background-color: #f8fafc;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px 40px;
+    z-index: 100;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.nav-content {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 60px;
+    margin-right: 32px;
+}
+
+.menu {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menus {
+    display: flex;
+    column-gap:  20px;
+}
+
+.contact-me {
+    padding: 8px 20px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+@media screen and (max-width: 720px) {
+    .nav-content {
+        justify-content: space-between;
+    }
+    .menu {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        background-color: #cecece;
+        width: 100%;
+        height: 0;
+        padding: 0px;
+        flex-direction: column;
+        row-gap: 10px;
+        overflow: hidden;
+        transition: 200ms ease-out;
+    }
+    .menu-active {
+        height: fit-content;
+        padding: 20px 0px;
+    }
+    .menus {
+        flex-direction: column;
+        align-items: center;
+    }
+    .menus a {
+        padding: 8px 20px;
+        border-radius: 8px;
+        width: 100%;
+        text-align: center;
+    }
+    .menus a:hover {
+        background-color: gray;
+        color: #f8fafc;
+    }
+    .menu a:active {
+        transform: scale(0.97);
+        transition-duration: 100ms;
+    }
+    .toggle {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 40px;
+        height: 24px;
+    }
+    .menu-toggle div {
+        width: 100%;
+        height: 3px;
+        border-radius: 9px;
+        background: #000;
+        transition: 200ms;
+    }
+    .menu-toggle-x {
+        height: 2px;
+        overflow: visible;
+    }
+    .menu-toggle-x div:first-child {
+        transform: rotate(45deg);
+    }
+    .menu-toggle-x div:last-child {
+        transform: rotate(-45deg);
+    }
+    .menu-toggle-x div:nth-child(2){
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}

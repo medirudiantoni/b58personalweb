@@ -1,0 +1,48 @@
+body {
+    background-color: #e2e8f0;
+    font-family: 'Poppins', sans-serif;
+}
+
+main {
+    padding: 40px;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    padding: 100px 0;
+}
+
+label {
+    display: block;
+}
+
+input, textarea {
+    width: 92%;
+    padding: 8px 16px;
+    border: none;
+    margin-bottom: 14px;
+    border-radius: 6px;
+    box-shadow: 5px 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+.button-submit {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+button {
+    padding: 6px 20px;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 99px;
+}
+
+@media screen and (max-width: 720px) {
+    main {
+        padding: 20px;
+    }
+}

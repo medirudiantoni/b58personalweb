@@ -1,0 +1,21 @@
+body {
+    padding: 100px 0;
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.container h1 {
+    line-height: 1.2;
+}
+
+.container img {
+    width: 100%;
+    aspect-ratio: 4/2.5;
+    object-fit: cover;
+}

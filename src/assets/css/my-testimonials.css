@@ -1,0 +1,103 @@
+body {
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+  background-color: rgb(226 232 240);
+}
+
+p {
+    margin: 0;
+}
+
+.contact-me {
+  background-color: black;
+  color: white;
+  padding: 7px 20px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+}
+
+main {
+  min-height: 100vh;
+  padding-top: 100px;
+}
+
+.container {
+  width: 100%;
+}
+
+.header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.stars {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 10px;
+  row-gap: 10px;
+  justify-content: center;
+}
+.stars button {
+  padding: 6px 18px;
+  background-color: rgb(4, 11, 37);
+  color: #fff;
+  outline: none;
+  border: none;
+  display: flex;
+  column-gap: 4px;
+  cursor: pointer;
+}
+.stars button:active {
+  transform: scale(0.95);
+  transition: 100ms;
+}
+.stars button img {
+  width: 14px;
+}
+
+#testimonial-cards-wrapper {
+  width: 100%;
+  max-width: 56rem;
+  height: fit-content;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 10px;
+  row-gap: 20px;
+  justify-content: center;
+}
+
+.testimonial-card {
+    width: 260px;
+    height: fit-content;
+    padding: 10px 12px;
+    background-color: rgb(245 245 245);
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.testimonial-card img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 8px;
+    margin: 0;
+}
+
+.text-card {
+    height: fit-content;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.testimonial-card p:last-child {
+    text-align: end;
+    font-weight: bold;
+    margin: 0;
+}

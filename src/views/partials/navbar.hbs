@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-md bg-body-tertiary container">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">
+            <img src="https://dumbways.id/assets/images/brandred.png" alt="DW" width="60px">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 text-center">
+              <li class="nav-item">
+                <a class="nav-link active fw-bold" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/project">Add Project</a>
+              </li>
+            </ul>
+            <div style="display: flex; align-items: center; column-gap: 8px;">
+                <a href="/contact" class="btn btn-dark text-center mr-2" type="submit">Contact</a>
+                {{#if session.user }}
+                <a href="/logout" class="btn btn-dark text-center" type="submit">Logout</a>
+                {{else }}
+                <a href="/login" class="btn btn-dark text-center" type="submit">Login</a>
+                {{/if }}
+            </div>
+          </div>
+        </div>
+    </nav>
