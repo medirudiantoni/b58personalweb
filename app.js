@@ -93,7 +93,6 @@ function registerPage(req, res){
 
 async function createNewUser(req, res){
     const { name, email, password } = req.body;
-    console.log(name, email);
     const hashedPassword = await bcrypt.hash(password, 10);
     try {
         const query = `INSERT INTO users(name, email, password) VALUES(:name, :email, :password)`;
@@ -105,7 +104,7 @@ async function createNewUser(req, res){
         res.redirect('/login');
     } catch (error) {
         console.log(error);
-        res.redirect('/register')
+        res.redirect('/register');
     }
 }
 
@@ -154,7 +153,7 @@ async function project(req, res){
         res.render('project', { project: result })
     } catch (error) {
         console.log(error);
-        res.redirect('/')        
+        res.redirect('/project')        
     }
 }
 
