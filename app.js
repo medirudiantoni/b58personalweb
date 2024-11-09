@@ -29,13 +29,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'src', 'assets')));
 app.use(session({
-    name: 'KhAeaKHaTTine',
+    name: 'my-session',
     secret: 'korewakaizokuogininaruatokoda',
     resave: false,
     saveUninitialized: true,
     cookie: {
         secure: false,
-        maxAge: 1000 * 60 * 60 * 24 // 24 jam
+        maxAge: 1000 * 60 * 60 * 24
     },
 }));
 app.use(flash());
@@ -83,6 +83,7 @@ async function home(req, res){
         res.render('index', { project: result, user: req.session.user });
     } catch (error) {
         console.log(error);
+        res.render('index');
     }
 }
 
@@ -375,4 +376,4 @@ function test(req, res){
     res.render('testing', { id: id ? `: ${id}` : null });
 }
 
-app.listen(port, () => console.log('Running on port: ' + port));
+app.listen(port, () => console.log(`Running on port: ${port}`));
