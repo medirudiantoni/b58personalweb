@@ -213,7 +213,6 @@ async function projectPost(req, res) {
       },
     });
     req.flash("success", "create new project success");
-    console.log("create project success");
     res.redirect("/");
   } catch (error) {
     console.log(error);
